@@ -9,4 +9,17 @@ public class Constants
 	public static final String excpectedLoginUrl = "https://groceryapp.uniqassosiates.com/admin";
 	//managepages
 	public static final String excpectedSearchflower = "Flowers";
+	public static final String addNewPageStringTitle = "Flowers";
+	public static final String addNewPageStringPageName = "Rose";
+	public static final String addNewPageStringdescription = "Roses are Red Flowers";
+	
+	public static final int addNewPageIntegerTitle = 123456;
+	public static final int addNewPageIntegerName = 7895;
+	public static final int addNewPageIntegerDescription = 3666;
+	
+	public static final String uploadImagePath = "C:\\Manu\\CODING\\JAVA PRGRM\\MySeleniumProject\\src\\main\\resources\\uploadFiles\\photo.jfif";
+	public static final String excpectedDelete ="×";
+	
+	///ADMIN PAGE
+	public static final String visibleTextDropdownAdmin ="Admin";
 }

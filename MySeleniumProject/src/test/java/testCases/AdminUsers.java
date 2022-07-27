@@ -14,15 +14,37 @@ public class AdminUsers extends BaseClass
 	LoginElements loginObj;
 	ExcelRead excelObj;
 	AdminUsersElements adminObj;
-  @Test
-  public void validateNewOption() throws Exception 
+  @Test(priority=1)
+  public void validateAddNewPageOption() throws Exception 
   {
-	 loginObj = new LoginElements(driver);
+	  loginObj = new LoginElements(driver);
 	  excelObj = new ExcelRead();
 	  adminObj = new AdminUsersElements(driver);
 	  loginObj.loginMethod(Constants.username,Constants.password);
 	  
 	  adminObj.clickAdminUser();
+	  adminObj.clicknewButton();
+	  adminObj.typeNewAdminUserName(excelObj.readingStringData(2, 5));
+	  adminObj.typeNewAdminPassword(excelObj.readingStringData(3, 5));
+	  adminObj.selectUserType(Constants.visibleTextDropdownAdmin);
+	  
+	  adminObj.clickSaveButton();
+	  adminObj.clickAddAlert();
+	     
 	  
   }
+  
+  @Test(priority=2)
+  public void validateDeletePageOption() throws Exception 
+  {
+	
+	  adminObj = new AdminUsersElements(driver);
+	  adminObj.clickDelete();
+	  utilobj.alertAccept();
+	  adminObj.clickDeleteAlert();
+	     
+	  
+  }
+  
+  
 }

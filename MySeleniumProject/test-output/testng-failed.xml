@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.ManagePages">
+      <class name="testCases.AdminUsers">
         <methods>
           <include name="afterMethod"/>
           <include name="beforeTest"/>
-          <include name="validateManagePagesSearchOption"/>
           <include name="afterTest"/>
           <include name="afterClass"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
+          <include name="validateTextBoxesNewOption"/>
         </methods>
-      </class> <!-- testCases.ManagePages -->
+      </class> <!-- testCases.AdminUsers -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

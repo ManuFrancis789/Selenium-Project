@@ -32,6 +32,8 @@ WebElement rememberMeChkBox;
 @FindBy(xpath ="//label[@for='remember']")
 WebElement rememberMe;
 
+@FindBy(xpath ="(//a[@class='small-box-footer'] )[1]")
+WebElement managePages;
 
 public void typeUserName(String user)
 {
@@ -67,10 +69,21 @@ public boolean isRememberMeSelected()
 	return(rememberMeChkBox.isSelected());
 }
 
+public boolean isPassswordDisplayed()
+{
+	return(password.isDisplayed());
+}
+
 public void rememberMeClick()
 {
 	rememberMe.click();
 }
+
+public boolean isManagePagesDisplayed()
+{
+	return(managePages.isDisplayed());	
+}
+
 public void loginMethod(String user,String pass)
 {
 	userName.sendKeys(user);

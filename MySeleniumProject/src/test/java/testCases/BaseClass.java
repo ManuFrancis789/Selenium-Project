@@ -2,6 +2,7 @@ package testCases;
 
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import utilityRepository.GeneralUtilities;
 import utilityRepository.ScreenShot;
 
@@ -15,6 +16,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -31,9 +33,18 @@ public class BaseClass
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\resources\\Properties\\Configaration.properties");
 		po.load(file);
 	}
-	
-
- 
+	/*
+	@DataProvider(name ="manage pages")
+	  public Object[][] dp() 
+	  {
+	    return new Object[][]
+	    		{
+	      new Object[] { Constants.addNewPageStringTitle,Constants.addNewPageStringTitle,Constants.addNewPageStringdescription },
+	      new Object[] { Constants.addNewPageIntegerTitle,Constants.addNewPageIntegerName,Constants.addNewPageIntegerDescription},
+	    
+	    };
+	  }
+ */
   @BeforeMethod
   public void beforeMethod() 
   {
