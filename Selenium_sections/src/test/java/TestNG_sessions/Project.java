@@ -38,7 +38,13 @@ public class Project
 	 password.sendKeys("admin");
 	 signin.click();
 	 
-	 WebElement adminElement = driver.findElement(By.xpath("(//a[@class='small-box-footer'] )[2]"));
+	
+	 //driver.findElement(By.xpath("(//p[//p[text()='Expense Category']")).click();
+	 WebElement x = driver.findElement(By.xpath("(//a[@class='nav-link'])[1]"));
+	// x.click();
+	 driver.findElement(By.xpath("(//a[@class='nav-link'])[3]")).click();
+	 driver.findElement(By.xpath("//p[text()='Expense Category']")).click();
+	/* WebElement adminElement = driver.findElement(By.xpath("(//a[@class='small-box-footer'] )[2]"));
 	 adminElement.click();
 	 WebElement newElement = driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-danger']"));
 	 newElement.click();
@@ -53,14 +59,49 @@ public class Project
 		driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
 		
 		WebElement deleteAddAlert = driver.findElement(By.xpath("//button[@class='close']"));
+		//System.out.println(deleteAddAlert.getText());
+		WebElement AlertText = driver.findElement(By.xpath("(//div[@class='alert alert-success alert-dismissible'])[1]/h5"));
+		
+		System.out.println(AlertText.getText());
+		
 		deleteAddAlert.click();
 		
+		//(//div[@class='alert alert-success alert-dismissible'])[1]/h5
 		WebElement delete = driver.findElement(By.xpath("(//a[@class='btn btn-sm btn btn-danger btncss'])[1]"));
 		delete.click();
 		
 		utilobj.alertAccept();
 		WebElement deleteAlert = driver.findElement(By.xpath("//button[@class='close']"));
 		deleteAlert.click();
+		
+		WebElement active = driver.findElement(By.xpath("//span[@class='badge bg-success'][1]"));
+		active.click();
+		WebElement deleteAlert1 = driver.findElement(By.xpath("//button[@class='close']"));
+		deleteAlert1.click();
+		WebElement inactive = driver.findElement(By.xpath("(//span[@class='badge bg-warning'])[1]"));
+		inactive.click();
+		WebElement deleteAlert2 = driver.findElement(By.xpath("//button[@class='close']"));
+		deleteAlert2.click();
+	*/
+		//////////////
+		//WebElement lock = driver.findElement(By.xpath("//a[@class='btn btn-sm btn-danger btn-rounded'][1]"));
+		//lock.isEnabled();
+		//System.out.println(lock.isEnabled());
+		//System.out.println(lock.getAttribute("class"));
+		//lock.click();
+		
+		//WebElement lock1 = driver.findElement(By.xpath("//a[@class='btn btn-sm btn-danger btn-rounded'][1]"));
+		//System.out.println(lock1.getAttribute("class"));
+		//WebElement noLock = driver.findElement(By.xpath("(//a[@class='btn btn-sm btn btn-success btncss'])[1]"));
+		//System.out.println(noLock.getAttribute("class"));
+		//WebElement alertText = driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']/h5"));
+		//System.out.println(alertText.getText());
+		
+		//WebElement alertElement = driver.findElement(By.xpath("//button[@data-dismiss='alert']"));
+		//alertElement.click();
+		//lock.click();
+		//WebElement lock1 = driver.findElement(By.xpath("//a[@class='btn btn-sm btn-danger btn-rounded'][1]"));
+		//System.out.println(lock1.isEnabled());
 	  /*WebElement element = driver.findElement(By.xpath("(//a[@class='small-box-footer'] )[1]"));
 	  //System.out.println(element.isDisplayed());
 	  element.click();

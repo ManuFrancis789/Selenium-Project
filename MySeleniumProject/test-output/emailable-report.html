@@ -8,95 +8,28 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">82</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">ChromeTest</a></td><td class="num">18</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">32,023</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="2">testCases.AdminUsers</td><td><a href="#m0">afterTest</a></td><td rowspan="1">1658855762631</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m1">beforeClass</a></td><td rowspan="1">1658855762585</td><td rowspan="1">-1658855762585</td></tr><tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="3">testCases.AdminUsers</td><td><a href="#m2">afterClass</a></td><td rowspan="1">1658855762626</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">afterMethod</a></td><td rowspan="1">1658855762622</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m4">beforeMethod</a></td><td rowspan="1">1658855762612</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">testCases.AdminUsers</td><td><a href="#m5">validateTextBoxesNewOption</a></td><td rowspan="1">1658855762617</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">testCases.AdminUsers</td><td><a href="#m0">validateActiveButtonIsClickable</a></td><td rowspan="1">1658942133439</td><td rowspan="1">499</td></tr><tr class="passedeven"><td><a href="#m1">validateAddNewPageOption</a></td><td rowspan="1">1658942128505</td><td rowspan="1">3379</td></tr><tr class="passedeven"><td><a href="#m2">validateDeletePageOption</a></td><td rowspan="1">1658942131889</td><td rowspan="1">578</td></tr><tr class="passedeven"><td><a href="#m3">validateInActiveButtonIsClickable</a></td><td rowspan="1">1658942133941</td><td rowspan="1">616</td></tr><tr class="passedeven"><td><a href="#m4">validateLockPageButtonIsClickable</a></td><td rowspan="1">1658942132467</td><td rowspan="1">596</td></tr><tr class="passedeven"><td><a href="#m5">validateUnLockPageButtonIsClickable</a></td><td rowspan="1">1658942133067</td><td rowspan="1">371</td></tr><tr class="passedodd"><td rowspan="1">testCases.DashBoard</td><td><a href="#m6">validate</a></td><td rowspan="1">1658942136746</td><td rowspan="1">1072</td></tr><tr class="passedeven"><td rowspan="7">testCases.Login</td><td><a href="#m7">validateLoginWithCorrectUserNameAndPassword</a></td><td rowspan="1">1658942113200</td><td rowspan="1">2102</td></tr><tr class="passedeven"><td><a href="#m8">validateLoginWithInvalidPassword</a></td><td rowspan="1">1658942116727</td><td rowspan="1">896</td></tr><tr class="passedeven"><td><a href="#m9">validateLoginWithInvalidUserName</a></td><td rowspan="1">1658942115883</td><td rowspan="1">839</td></tr><tr class="passedeven"><td><a href="#m10">validateLoginWithPasswordAlone</a></td><td rowspan="1">1658942111460</td><td rowspan="1">1076</td></tr><tr class="passedeven"><td><a href="#m11">validateLoginWithUserNameAlone</a></td><td rowspan="1">1658942112543</td><td rowspan="1">648</td></tr><tr class="passedeven"><td><a href="#m12">validateRememberMebuttonAfterClick</a></td><td rowspan="1">1658942115557</td><td rowspan="1">326</td></tr><tr class="passedeven"><td><a href="#m13">validateRememberMebuttonBeforeClick</a></td><td rowspan="1">1658942115317</td><td rowspan="1">236</td></tr><tr class="passedodd"><td rowspan="4">testCases.ManagePages</td><td><a href="#m14">validateDeleteButton</a></td><td rowspan="1">1658942125573</td><td rowspan="1">479</td></tr><tr class="passedodd"><td><a href="#m15">validateManagePagesSearchOptionWithPageName</a></td><td rowspan="1">1658942120185</td><td rowspan="1">3685</td></tr><tr class="passedodd"><td><a href="#m16">validateTextBoxesinAddNewPageOption</a></td><td rowspan="1">1658942123873</td><td rowspan="1">1305</td></tr><tr class="passedodd"><td><a href="#m17">validateUploadImagesinAddNewPageOption</a></td><td rowspan="1">1658942125181</td><td rowspan="1">389</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testCases.AdminUsers#afterTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;this.driver&quot; is null
-	at utilityRepository.GeneralUtilities.quitBrowser(GeneralUtilities.java:109)
-	at testCases.BaseClass.afterTest(BaseClass.java:86)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:643)
-	at org.testng.TestRunner.afterRun(TestRunner.java:891)
-	at org.testng.TestRunner.run(TestRunner.java:604)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testCases.AdminUsers#beforeClass</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\91859\AppData\Local\Temp\testng-eclipse-515338350\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:267)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:684)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:277)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testCases.AdminUsers#afterClass</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testCases.AdminUsers#afterMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testCases.AdminUsers#beforeMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testCases.AdminUsers#validateTextBoxesNewOption</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\91859\AppData\Local\Temp\testng-eclipse-515338350\testng-customsuite.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:267)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:684)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:277)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:806)
-	at org.testng.TestRunner.run(TestRunner.java:601)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ChromeTest</h2><h3 id="m0">testCases.AdminUsers#validateActiveButtonIsClickable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testCases.AdminUsers#validateAddNewPageOption</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testCases.AdminUsers#validateDeletePageOption</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testCases.AdminUsers#validateInActiveButtonIsClickable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testCases.AdminUsers#validateLockPageButtonIsClickable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testCases.AdminUsers#validateUnLockPageButtonIsClickable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testCases.DashBoard#validate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testCases.Login#validateLoginWithCorrectUserNameAndPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testCases.Login#validateLoginWithInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">testCases.Login#validateLoginWithInvalidUserName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">testCases.Login#validateLoginWithPasswordAlone</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">testCases.Login#validateLoginWithUserNameAlone</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">testCases.Login#validateRememberMebuttonAfterClick</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">testCases.Login#validateRememberMebuttonBeforeClick</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">testCases.ManagePages#validateDeleteButton</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">testCases.ManagePages#validateManagePagesSearchOptionWithPageName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">testCases.ManagePages#validateTextBoxesinAddNewPageOption</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">testCases.ManagePages#validateUploadImagesinAddNewPageOption</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

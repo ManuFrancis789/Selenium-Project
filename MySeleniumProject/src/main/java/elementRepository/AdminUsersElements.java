@@ -40,6 +40,21 @@ public class AdminUsersElements
 	@FindBy(xpath = "//button[@class='close']")
 	WebElement deleteAlert;
 	
+	@FindBy(xpath = "(//a[@class='btn btn-sm btn-danger btn-rounded'][1])")
+	WebElement lockButton;
+	
+	@FindBy(xpath = "(//a[@class='btn btn-sm btn btn-success btncss'])[1]")
+	WebElement unLockButton;
+	
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']/h5")
+	WebElement alertText;
+	
+	@FindBy(xpath="(//span[@class='badge bg-success'])[1]")
+	WebElement active;
+	
+	@FindBy(xpath="(//span[@class='badge bg-warning'])[1]")
+	WebElement inactive;
+	
 	public void clickAdminUser()
 	{
 		adminUsers.click();
@@ -70,7 +85,7 @@ public class AdminUsersElements
 		save.click();
 	}
 	
-	public void clickAddAlert()
+	public void clickAlert()
 	{
 		addAlert.click();
 	}
@@ -85,9 +100,34 @@ public class AdminUsersElements
 		deleteAlert.click();
 	}
 	
+	public void clickLockButton()
+	{
+		lockButton.click();
+	}
+	
+	public void clickUnLockButton()
+	{
+		
+		unLockButton.click();
+	}
+	
+	public String getAlertText()
+	{
+		return(alertText.getText());
+	}
+	
+	public void clickActiveButton()
+	{
+		active.click();
+	}
+	public void clickInactiveButton()
+	{
+		inactive.click();
+	}
 	public AdminUsersElements(WebDriver driver)
 	{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
 }

@@ -21,5 +21,10 @@ public class Constants
 	public static final String excpectedDelete ="×";
 	
 	///ADMIN PAGE
-	public static final String visibleTextDropdownAdmin ="Admin";
+	public static final String visibleTextDropdownAdmin = "Admin";
+	public static final String expectedLockClickAlert = "Alert!";
+	public static final String excpectedAddClickAlert = "Alert!";
+	public static final String expectedDeleteClickAlert = "Alert!";
+	public static final String expectedActiveClickAlert = "Alert!";
+	public static final String expectedInActiveClickAlert = "Alert!";
 }

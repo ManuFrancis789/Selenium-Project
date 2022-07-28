@@ -18,7 +18,7 @@ public class ScreenShot
 		  String date = d.toString().replace(":", "_").replace(" ", "_") + ".png";
 		  TakesScreenshot ts=(TakesScreenshot)driver;
 		  File source=ts.getScreenshotAs(OutputType.FILE);
-		  FileHandler.copy(source, new File(System.getProperty("user.dir")+"\\src\\test\\resources\\Screenshots"+ResultName +date));
+		  FileHandler.copy(source, new File(System.getProperty("user.dir")+"\\src\\test\\resources\\Screenshots\\"+ResultName +date));
 		  System.out.println("Screenshot taken");
 	}
 

@@ -1,6 +1,7 @@
 package testCases;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import constants.Constants;
@@ -29,7 +30,11 @@ public class AdminUsers extends BaseClass
 	  adminObj.selectUserType(Constants.visibleTextDropdownAdmin);
 	  
 	  adminObj.clickSaveButton();
-	  adminObj.clickAddAlert();
+	  String actual = adminObj.getAlertText();
+	  String excpected = Constants.expectedDeleteClickAlert;
+	  adminObj.clickAlert();
+	  
+	  Assert.assertEquals(actual, excpected);
 	     
 	  
   }
@@ -41,10 +46,53 @@ public class AdminUsers extends BaseClass
 	  adminObj = new AdminUsersElements(driver);
 	  adminObj.clickDelete();
 	  utilobj.alertAccept();
+	  String actual = adminObj.getAlertText();
+	  String excpected = Constants.expectedDeleteClickAlert;
 	  adminObj.clickDeleteAlert();
 	     
 	  
   }
-  
-  
+  @Test(priority=3)
+  public void validateLockPageButtonIsClickable() throws Exception 
+  {
+		  adminObj = new AdminUsersElements(driver);  
+		  adminObj.clickLockButton();
+		  String actual = adminObj.getAlertText();
+		  String expected = Constants.expectedLockClickAlert;
+		  adminObj.clickAlert();
+		  Assert.assertEquals(actual, expected);
+  }
+  @Test(priority=4)
+  public void validateUnLockPageButtonIsClickable() throws Exception 
+  {
+	
+	  adminObj = new AdminUsersElements(driver);
+	  adminObj.clickUnLockButton();
+	  String actual = adminObj.getAlertText();
+	  String expected = Constants.expectedLockClickAlert;
+	  adminObj.clickAlert();
+	  Assert.assertEquals(actual, expected);
+  }
+  @Test(priority=5)
+  public void validateActiveButtonIsClickable() throws Exception 
+  {
+	
+	  adminObj = new AdminUsersElements(driver);
+	  adminObj.clickActiveButton();
+	  String actual = adminObj.getAlertText();
+	  String expected = Constants.expectedActiveClickAlert;
+	  adminObj.clickAlert();
+	  Assert.assertEquals(actual, expected);
+  }
+  @Test(priority=6)
+  public void validateInActiveButtonIsClickable() throws Exception 
+  {
+	
+	  adminObj = new AdminUsersElements(driver);
+	  adminObj.clickInactiveButton();
+	  String actual = adminObj.getAlertText();
+	  String expected = Constants.expectedActiveClickAlert;
+	  adminObj.clickAlert();
+	  Assert.assertEquals(actual, expected);
+  }
 }
