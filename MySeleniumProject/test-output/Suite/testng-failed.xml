@@ -4,17 +4,17 @@
   <test thread-count="5" name="ChromeTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.Login">
+      <class name="testCases.AdminUsers">
         <methods>
-          <include name="ValidateLoginWithUserNameAlone"/>
-          <include name="beforeTest"/>
           <include name="afterMethod"/>
+          <include name="beforeTest"/>
           <include name="afterTest"/>
           <include name="afterClass"/>
+          <include name="validateLockPageButtonIsClickable"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- testCases.Login -->
+      </class> <!-- testCases.AdminUsers -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

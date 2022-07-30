@@ -1,5 +1,6 @@
 package elementRepository;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -49,6 +50,24 @@ public class ManagePagesElements
 	
 	@FindBy(xpath="//button[@class='close']")
 	WebElement deleteAlert;
+	
+	@FindBy(xpath="//button[@name='create']")
+	WebElement saveButton;
+	
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']/h5")
+	WebElement alertText;
+
+	@FindBy(xpath="//button[@class='close']")
+	WebElement saveAlert;
+	
+	@FindBy(xpath="//a[text()='Home']")
+	WebElement home;
+	
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
+	WebElement alert;
+	
+	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]")
+	WebElement getPageTitleDynamicTable;
 	
 	public void managePagesClickMethod()
 	{
@@ -141,7 +160,7 @@ public class ManagePagesElements
 	{
 		return(pageDescription.getAttribute("value"));
 	}
-	// System.out.println(e.getAttribute("value").isEmpty());
+
 	public boolean isUploadImageValueAttributeEmpty()
 	{
 		
@@ -161,6 +180,41 @@ public class ManagePagesElements
 	public void clickDeleteAlert()
 	{
 		deleteAlert.click();
+	}
+	
+	public void clickSaveEnterkey()
+	{
+		saveButton.sendKeys(Keys.ENTER);
+	}
+	
+	public String getAlertText()
+	{
+		return(alertText.getText());
+	}
+	
+	public void clickSaveAlert()
+	{
+		saveAlert.click();
+	}
+	
+	public void clickHome()
+	{
+		home.click();
+	}
+	
+	public void scrollToAlert()
+	{
+		utilobj.scrollMethod(alert);	
+	}
+	public WebElement returnAlertElement()
+	{
+		return(alert);
+	}
+	
+	public String getPageTitle()
+	{
+		
+		return(getPageTitleDynamicTable.getText());
 	}
 	
 	public ManagePagesElements (WebDriver driver)

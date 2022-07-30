@@ -4,10 +4,11 @@
   <test thread-count="5" name="ChromeTest">
    <parameter name="browser" value="chrome"></parameter>
     <classes>
-    		<class name="testCases.Login"/>
+    	 	<class name="testCases.Login"/>
             <class name="testCases.ManagePages"/>
-            <class name="testCases.AdminUsers"/>
-            <class name="testCases.DashBoard"/>
+            <class name="testCases.AdminUsers"/>     
+           <!--  <class name="testCases.DashBoard"/>  -->
+            <class name="testCases.ManagedeliveryBoy"/>
     </classes>
     
   </test> <!-- Test -->

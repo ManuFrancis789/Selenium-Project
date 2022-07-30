@@ -19,6 +19,7 @@ public class Constants
 	
 	public static final String uploadImagePath = "C:\\Manu\\CODING\\JAVA PRGRM\\MySeleniumProject\\src\\main\\resources\\uploadFiles\\photo.jfif";
 	public static final String excpectedDelete ="×";
+	public static final String expectedSaveClickAlert = "Alert!";
 	
 	///ADMIN PAGE
 	public static final String visibleTextDropdownAdmin = "Admin";
@@ -27,4 +28,11 @@ public class Constants
 	public static final String expectedDeleteClickAlert = "Alert!";
 	public static final String expectedActiveClickAlert = "Alert!";
 	public static final String expectedInActiveClickAlert = "Alert!";
+	
+	public static final String updateExpenseCategory = "Selenium";
+	
+	//Manage Delivery Boy
+	public static final String searchName = "Selenium";
+	public static final String searchPhoneNumber = "8590023666";
+	public static final String searchEmail = "manu@gmail.com";
 }

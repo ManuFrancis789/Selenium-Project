@@ -40,28 +40,46 @@ public class ManagePages extends BaseClass
 	Assert.assertEquals(actual, excpected);
 	  	 
   }
+	
+	
   
-  @Test(dataProvider = "manage pages",enabled = false)
-  public void validateTextBoxesOfAddNewPageOption(String title,String name,String description) throws Exception 
+  @Test(dataProvider = "manage pages",priority=5)
+  public void validateAddNewPageOption(String title,String name,String description) throws Exception 
   {
 	  loginObj = new LoginElements(driver);
 	  excelObj = new ExcelRead();
 	  managePageObj = new ManagePagesElements(driver);
 	  
-	  loginObj.loginMethod(Constants.username,Constants.password);
-	  managePageObj.managePagesClickMethod();
-	  
+	 	  
 	  managePageObj.newBtnClick();
 	  managePageObj.pageTitleSendKeys(title);
 	  managePageObj.pageNameSendKeys(name);
 	  managePageObj.pageDescriptionSendKeys(description);
+	  managePageObj.uploadImage(Constants.uploadImagePath);
+	  managePageObj.clickSaveEnterkey();
+	  utilobj.back();
+	  utilobj.refreshPage();
+	  utilobj.back();
+	  String actual = managePageObj.getPageTitle();
+	  String excpected = Constants.addNewPageStringTitle;
+	  managePageObj.clickDelete();
+	  utilobj.alertAccept();
+	  managePageObj.clickDeleteAlert();
 	  
-	  managePageObj.pageTitleClear();
-	  managePageObj.pageNameClear();
-	  managePageObj.pageDescriptionClear();
+	  Assert.assertEquals(actual, excpected);
+	  
 	  	 
   }
   
+  @DataProvider(name ="manage pages")
+  public Object[][] dp() 
+  {
+    return new Object[][]
+    		{
+      new Object[] { Constants.addNewPageStringTitle,Constants.addNewPageStringTitle,Constants.addNewPageStringdescription },
+        
+    };
+  }
   
   @Test(priority=2)
   public void validateTextBoxesinAddNewPageOption() throws Exception 
@@ -103,4 +121,6 @@ public class ManagePages extends BaseClass
 	  Assert.assertEquals(actual, excpected);
 	
   }
+
+  
 }

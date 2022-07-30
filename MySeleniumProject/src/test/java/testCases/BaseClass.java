@@ -33,18 +33,7 @@ public class BaseClass
 		FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\resources\\Properties\\Configaration.properties");
 		po.load(file);
 	}
-	/*
-	@DataProvider(name ="manage pages")
-	  public Object[][] dp() 
-	  {
-	    return new Object[][]
-	    		{
-	      new Object[] { Constants.addNewPageStringTitle,Constants.addNewPageStringTitle,Constants.addNewPageStringdescription },
-	      new Object[] { Constants.addNewPageIntegerTitle,Constants.addNewPageIntegerName,Constants.addNewPageIntegerDescription},
-	    
-	    };
-	  }
- */
+
   @BeforeMethod
   public void beforeMethod() 
   {

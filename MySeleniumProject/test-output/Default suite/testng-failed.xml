@@ -10,23 +10,51 @@
           <include name="validateLoginWithCorrectUserNameAndPassword"/>
           <include name="afterTest"/>
           <include name="afterClass"/>
-          <include name="beforeMethod"/>
           <include name="validateLoginWithPasswordAlone"/>
+          <include name="beforeMethod"/>
           <include name="validateLoginWithInvalidUserName"/>
           <include name="validateLoginWithUserNameAlone"/>
           <include name="validateLoginWithInvalidPassword"/>
-          <include name="validateRememberMebuttonBeforeClick"/>
           <include name="beforeClass"/>
+          <include name="validateRememberMebuttonBeforeClick"/>
           <include name="validateRememberMebuttonAfterClick"/>
         </methods>
       </class> <!-- testCases.Login -->
-      <class name="testCases.AdminUsers">
+      <class name="testCases.ManagePages">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="validateUnLockPageButtonIsClickable"/>
           <include name="afterTest"/>
+          <include name="afterClass"/>
+          <include name="beforeMethod"/>
+          <include name="validateManagePagesSearchOptionWithPageName"/>
+          <include name="validateTextBoxesinAddNewPageOption"/>
+          <include name="beforeClass"/>
           <include name="validateAddNewPageOption"/>
+          <include name="validateDeleteButton"/>
+          <include name="validateUploadImagesinAddNewPageOption"/>
+        </methods>
+      </class> <!-- testCases.ManagePages -->
+      <class name="testCases.DashBoard">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="validate"/>
+          <include name="afterTest"/>
+          <include name="afterClass"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testCases.DashBoard -->
+      <class name="testCases.AdminUsers">
+        <methods>
+          <include name="validateActiveButtonIsClickable"/>
+          <include name="validateInActiveButtonIsClickable"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
+          <include name="validateAddNewPageOption"/>
+          <include name="afterTest"/>
+          <include name="validateUnLockPageButtonIsClickable"/>
           <include name="afterClass"/>
           <include name="validateDeletePageOption"/>
           <include name="validateLockPageButtonIsClickable"/>
@@ -34,20 +62,6 @@
           <include name="beforeClass"/>
         </methods>
       </class> <!-- testCases.AdminUsers -->
-      <class name="testCases.ManagePages">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
-          <include name="afterClass"/>
-          <include name="beforeMethod"/>
-          <include name="validateTextBoxesinAddNewPageOption"/>
-          <include name="validateManagePagesSearchOptionWithPageName"/>
-          <include name="beforeClass"/>
-          <include name="validateDeleteButton"/>
-          <include name="validateUploadImagesinAddNewPageOption"/>
-        </methods>
-      </class> <!-- testCases.ManagePages -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

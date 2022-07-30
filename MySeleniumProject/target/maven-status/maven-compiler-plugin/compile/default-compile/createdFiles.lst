@@ -1,3 +1,4 @@
+elementRepository\DashBoardElements.class
 utilityRepository\ScreenShot.class
 utilityRepository\ExcelRead.class
 utilityRepository\UploadUtility.class
