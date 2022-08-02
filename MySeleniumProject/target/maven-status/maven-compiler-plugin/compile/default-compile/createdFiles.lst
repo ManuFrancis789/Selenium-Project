@@ -1,8 +1,8 @@
-elementRepository\DashBoardElements.class
-utilityRepository\ScreenShot.class
-utilityRepository\ExcelRead.class
 utilityRepository\UploadUtility.class
 elementRepository\LoginElements.class
 utilityRepository\GeneralUtilities.class
 elementRepository\AdminUsersElements.class
+elementRepository\DashBoardElements.class
+utilityRepository\ScreenShot.class
+utilityRepository\ExcelRead.class
 elementRepository\ManagePagesElements.class

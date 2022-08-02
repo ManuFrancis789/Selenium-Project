@@ -1,6 +1,6 @@
-testCases\BaseClass.class
 testCases\AdminUsers.class
 testCases\DashBoard.class
+testCases\BaseClass.class
 testCases\Login.class
 testCases\ManagePages.class
 constants\Constants.class

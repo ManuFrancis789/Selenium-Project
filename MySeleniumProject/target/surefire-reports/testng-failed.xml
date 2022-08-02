@@ -4,18 +4,17 @@
   <test thread-count="5" name="ChromeTest(failed)" verbose="0">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.DashBoard">
+      <class name="testCases.ManageLocations">
         <methods>
           <include name="afterMethod"/>
           <include name="beforeTest"/>
           <include name="afterTest"/>
+          <include name="validateSearchWithCountryAlone"/>
           <include name="afterClass"/>
-          <include name="validateUpdateExpenseCategory"/>
           <include name="beforeMethod"/>
-          <include name="validateDeleteExpenseCategory"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- testCases.DashBoard -->
+      </class> <!-- testCases.ManageLocations -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

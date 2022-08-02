@@ -28,7 +28,7 @@ public class Project
 	String url="https://groceryapp.uniqassosiates.com/admin";
 	String browser="chrome";
 	UtilityRepositoryClass utilobj = new UtilityRepositoryClass();
-  @Test() 
+  @Test(enabled = false) 
   public void test()
   {
 	  WebElement userName = driver.findElement(By.xpath("//input[@name='username']")); 
@@ -79,14 +79,63 @@ public class Project
       submitBtn.click();
       WebElement resetbtn = driver.findElement(By.xpath("//a[@class='btn btn-default btn-fix']"));
       resetbtn.click();
-      
       WebElement delete = driver.findElement(By.xpath("(//a[@class='btn btn-sm btn btn-danger btncss'])[1]"));
       delete.click();
-      utilobj.alertAccept();
+       utilobj.alertAccept();
       
-      WebElement alert1 = driver.findElement(By.xpath("//button[@class='close']"));
- 	 alert1.click();
+       WebElement alert1 = driver.findElement(By.xpath("//button[@class='close']"));
+  	alert1.click();
       
+      WebElement update = driver.findElement(By.xpath("(//a[@class='btn btn-sm btn btn-primary btncss'])[2]"));
+      update.click();
+      WebElement saveUpdate = driver.findElement(By.xpath("//button[@name='update']"));
+      saveUpdate.sendKeys(Keys.ENTER);
+      //WebElement delete = driver.findElement(By.xpath("(//a[@class='btn btn-sm btn btn-danger btncss'])[1]"));
+     // delete.click();
+      //utilobj.alertAccept(); 
+      
+      WebElement alert2 = driver.findElement(By.xpath("//button[@class='close']"));
+ 	alert2.click();
+ 	
+ 	// WebElement search1 = driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-primary']"));
+	 //search1.click();
+
+     // WebElement searchName1 = driver.findElement(By.xpath("(//input[@class='form-control'])[1]"));
+ 	//searchName1.sendKeys("kakakakakakaka");
+ 	//WebElement submitBtn1 = driver.findElement(By.xpath("//button[@class='btn btn-block-sm btn-danger']"));
+ 	//submitBtn1.click();
+ 	//WebElement pageName = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td"));
+     //System.out.println(pageName.getText()); 
+     
+     WebElement active = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[6]"));
+     //System.out.println(active.getText());
+     
+     if(active.getText()=="Active")
+     {
+    	active.click();
+    	WebElement alert3 = driver.findElement(By.xpath("//button[@class='close']"));
+       	alert3.click();
+      
+    	String excpected = "Inactive";
+    	 WebElement active5 = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[6]"));
+    	String actual = active5.getText();
+    	Assert.assertEquals(actual,excpected);
+    	
+     }
+     else if(active.getText()=="Inactive")
+     {
+    	 WebElement active1 = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[6]"));
+    	 active1.click();
+    	 WebElement alert4 = driver.findElement(By.xpath("//button[@class='close']"));
+    	   	alert4.click();
+    	
+    	 String excpected = "Active";
+    	 WebElement active2 = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[6]"));
+     	String actual = active2.getText();
+     	Assert.assertEquals(actual,excpected);
+     		}
+     
+     
       
   }
   
@@ -98,6 +147,7 @@ public class Project
 	  WebElement signin = driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block']"));
 	  userName.sendKeys(user);
 	  password.sendKeys(pass);
+	  
 	 
 	  //userName.clear();
 	 // password.clear();
@@ -167,8 +217,8 @@ public class Project
     };
   }
   
-  @Test(enabled = false) 
-  public void test3()
+  @Test() 
+  public void test3() throws Exception
   {
 	  WebElement userName = driver.findElement(By.xpath("//input[@name='username']")); 
 	  WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
@@ -178,38 +228,97 @@ public class Project
 	  userName.sendKeys("admin");
 	 password.sendKeys("admin");
 	 signin.click();
-	 
+	 driver.findElement(By.xpath("(//a[@class='small-box-footer'])[11]")).click();
+	 WebElement newBtn =driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-danger']"));
+	 newBtn.click();
+	 WebElement countryDropDown=driver.findElement(By.xpath("(//select[@class='form-control selectpicker'])[1]"));
+	 Select selectobj = new Select(countryDropDown);
+		selectobj.selectByVisibleText("United Kingdom");
+		WebElement stateDropDown=driver.findElement(By.xpath("(//select[@class='form-control selectpicker'])[2]"));	
+		Select selectobj2 = new Select(stateDropDown);
+		selectobj2.selectByVisibleText("Cambridge");
+		WebElement location = driver.findElement(By.xpath("(//input[@class='form-control'])[1]"));
+		location.sendKeys("Anfield");
+		WebElement delCharge = driver.findElement(By.xpath("(//input[@class='form-control'])[2]"));
+		delCharge.sendKeys("8500");
+driver.findElement(By.xpath("//button[@name='create']")).click();
+driver.findElement(By.xpath("//i[@class='nav-icon fas fa-map-marker']")).click();
+
+WebElement getLocation = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td"));
+System.out.println(getLocation.getText());
+
+WebElement search = driver.findElement(By.xpath("//a[@class='btn btn-rounded btn-primary']"));
+search.click();
+
+
+WebElement countryDropDown1=driver.findElement(By.xpath("(//select[@class='form-control selectpicker'])[1]"));
+Select selectobj3 = new Select(countryDropDown1);
+selectobj3.selectByVisibleText("United Kingdom");
+
+
+//WebElement stateDropDown1=driver.findElement(By.xpath("(//select[@class='form-control selectpicker'])[2]"));	
+//Select selectobj4 = new Select(stateDropDown1);
+//selectobj4.selectByVisibleText("Cambridge");
+
+WebElement locationsearch = driver.findElement(By.xpath("//input[@class='form-control']"));
+locationsearch.sendKeys("Anfield");
+
+WebElement searchBtn = driver.findElement(By.xpath("//button[@class='btn btn-danger btn-fix align-center']"));
+
+driver.findElement(By.xpath("//i[@class='nav-icon fas fa-map-marker']")).click();
+WebElement delete = driver.findElement(By.xpath("(//a[@class='btn btn-sm btn btn-danger btncss'])[1]"));
+delete.click();
+
+utilobj.alertAccept();
+
+WebElement active = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[5]/a/span"));
+System.out.println(active.getText());
+
+
+
+
+
+		 
 	
-	 //driver.findElement(By.xpath("(//p[//p[text()='Expense Category']")).click();
-	 //WebElement x = driver.findElement(By.xpath("(//a[@class='nav-link'])[1]"));
-	//x.click();
-	 driver.findElement(By.xpath("(//a[@class='nav-link'])[3]")).click();
-	 driver.findElement(By.xpath("//p[text()='Expense Category']")).click();
+  }
+  @Test(enabled = false) 
+  public void testttt()
+  {
+	  Actions actionobj = new Actions(driver);
+	  WebElement userName = driver.findElement(By.xpath("//input[@name='username']")); 
+	  WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
+	  WebElement signin = driver.findElement(By.xpath("//button[@class='btn btn-dark btn-block']"));
+	  //WebElement dismiss = driver.findElement(By.xpath("//button[@data-dismiss='alert']"));
+	 // System.out.println(password.isDisplayed());
+	  userName.sendKeys("admin");
+	 password.sendKeys("admin");
+	 signin.click();
 	 
-	 WebElement update = driver.findElement(By.xpath("(//a[@class='btn btn-sm btn btn-primary btncss'])[1]"));
-	 update.click();
-	 WebElement updateTextBox= driver.findElement(By.xpath("(//input[@class='form-control'])[2]"));
-	 updateTextBox.clear();
-	 updateTextBox.sendKeys("qwerty");
-	 
-	 WebElement updateButton = driver.findElement(By.xpath("(//button[@type='submit'])[2]"));
-	 updateButton.click();
-	 
-	 WebElement getTitle = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td"));
-	 System.out.println(getTitle.getText());
-	 
-	 WebElement alert = driver.findElement(By.xpath("//button[@class='close']"));
-	 alert.click();
-	 
-	 WebElement delete = driver.findElement(By.xpath("(//a[@class='btn btn-sm btn btn-danger btncss'])[1]"));
-	 delete.click();
-	 utilobj.alertAccept();
-	 WebElement alert1 = driver.findElement(By.xpath("//button[@class='close']"));
-	 alert1.click();
-	 
-	 WebElement getTitle1 = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td"));
-	 System.out.println(getTitle1.getText());	 
+utilobj.clickMethodUtility(By.xpath("(//a[@class='small-box-footer'])[10]"));
+WebElement date = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[6]/a[2]"));
+	date.click();
 	
+	WebElement calendar = driver.findElement(By.xpath("(//input[@type='date'])[3]"));
+	calendar.click();
+	calendar.sendKeys(Keys.ARROW_DOWN);
+	calendar.sendKeys(Keys.ARROW_LEFT);
+	calendar.sendKeys(Keys.ARROW_DOWN);
+	calendar.sendKeys(Keys.ARROW_LEFT);
+	calendar.sendKeys(Keys.ARROW_DOWN);
+	
+	System.out.println(calendar.getAttribute("value"));
+	WebElement timeFrom = driver.findElement(By.xpath("(//input[@id='basicExample'])[1]"));
+	timeFrom.click();
+	timeFrom.sendKeys(Keys.ARROW_DOWN);
+	timeFrom.sendKeys(Keys.ENTER);
+	//actionobj.contextClick(calendar).build().perform();
+	//actionobj.
+	//actionobj.click(calendar).build().perform();
+	/*String dateVal = "November 22, 2020";
+	JavascriptExecutor  js=(JavascriptExecutor)driver; 
+    js.executeScript("arguments[0].click();", 
+    		driver.findElement(By.xpath("(//input[@type='date'])[3]")));*/
+  
   }
   
   @BeforeTest

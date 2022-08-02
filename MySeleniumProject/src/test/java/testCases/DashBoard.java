@@ -14,16 +14,28 @@ public class DashBoard extends BaseClass
 	LoginElements loginObj;
 	ExcelRead excelObj;
 	DashBoardElements dashObj;
-  @Test(priority=1)
+	
+	@Test(priority=1)
+	  public void validateAddExpenseCategory() throws Exception 
+	  {
+		  loginObj = new LoginElements(driver);
+		  excelObj = new ExcelRead();
+		  dashObj = new DashBoardElements(driver);
+		  loginObj.loginMethod(Constants.username,Constants.password);
+		  
+		  dashObj.clickManageExpenseTab();
+		  dashObj.clickexpenseCategoryTab();
+		  dashObj.clickNewBtn();
+		  dashObj.enterDataInUpdateTextBox(Constants.newExpenseCategory);
+		  
+		  dashObj.clickSaveNew();
+		  dashObj.clickAlert();
+		 
+	  }
+  @Test(priority=2)
   public void validateUpdateExpenseCategory() throws Exception 
   {
-	  loginObj = new LoginElements(driver);
-	  excelObj = new ExcelRead();
-	  dashObj = new DashBoardElements(driver);
-	  loginObj.loginMethod(Constants.username,Constants.password);
-	  
-	  dashObj.clickManageExpenseTab();
-	  dashObj.clickexpenseCategoryTab();
+	 
 	  dashObj.clickUpdate();
 	  dashObj.clearTextBox();
 	  dashObj.enterDataInUpdateTextBox(Constants.updateExpenseCategory);
@@ -35,7 +47,7 @@ public class DashBoard extends BaseClass
 	  Assert.assertEquals(actual, expected);
 	 
   }
-  @Test(priority=2)
+  @Test(priority=3)
   public void validateDeleteExpenseCategory() throws Exception 
   {	
 	  dashObj = new DashBoardElements(driver);

@@ -36,6 +36,13 @@ public class DashBoardElements
 	@FindBy(xpath="//a[@class='btn btn-sm btn btn-danger btncss'][1]")
 	WebElement delete;
 	
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")
+	WebElement newBtn ;
+	
+	@FindBy(xpath="//button[@name='Create']")
+	WebElement save ;
+	
+	
 	public void clickUpdate()
 	{
 		updateButton.click();
@@ -81,6 +88,15 @@ public class DashBoardElements
 		delete.click();
 	}
 	
+	public void clickNewBtn()
+	{
+		newBtn.click();
+	}
+	
+	public void clickSaveNew()
+	{
+		save.click();
+	}
 	public DashBoardElements(WebDriver driver)
 	{
 		this.driver = driver;

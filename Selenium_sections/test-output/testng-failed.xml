@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="test"/>
+          <include name="test3"/>
         </methods>
       </class> <!-- TestNG_sessions.Project -->
     </classes>

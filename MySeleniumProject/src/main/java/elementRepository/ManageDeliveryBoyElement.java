@@ -64,6 +64,18 @@ public class ManageDeliveryBoyElement
 	@FindBy(xpath="(//a[@class='btn btn-sm btn btn-danger btncss'])[1]")
 	WebElement deleteButton ;
 	
+	@FindBy(xpath="(//a[@class='btn btn-sm btn btn-primary btncss'])[1]")
+	WebElement updateButton;
+	
+	@FindBy(xpath="//button[@name='update']")
+	WebElement saveUpdateButton;
+	
+	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td")
+	WebElement getName;
+	
+	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[6]")
+	WebElement activeBtn;
+	
 	
 	public void clickManageDeliveryBoy()
 	{
@@ -150,6 +162,35 @@ public class ManageDeliveryBoyElement
 		deleteButton.click();
 	}
 	
+	public void clickUpdateButton()
+	{
+		updateButton.click();
+	}
+	
+	public void emailTextBoxClear()
+	{
+		emailTextBox.clear();
+	}
+	
+	public void clickSaveUpdateButton()
+	{
+		saveUpdateButton.sendKeys(Keys.ENTER);
+	}
+	
+	public String getNameOfDeliveryBoy()
+	{
+		return(getName.getText());
+	}
+	
+	public String getActiveBtnStatus()
+	{
+		return(activeBtn.getText());
+	}
+	
+	public void clickActiveBtn()
+	{
+		activeBtn.click();
+	}
 	
 	public ManageDeliveryBoyElement(WebDriver driver)
 	{

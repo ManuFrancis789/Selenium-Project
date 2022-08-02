@@ -55,6 +55,18 @@ public class AdminUsersElements
 	@FindBy(xpath="(//span[@class='badge bg-warning'])[1]")
 	WebElement inactive;
 	
+	@FindBy(xpath="(//a[@class='btn btn-sm btn btn-primary btncss'])[1]")
+	WebElement update;
+	
+	@FindBy(xpath="(//input[@class='form-control'])[2]")
+	WebElement updateUsername;
+	
+	@FindBy(xpath="(//input[@class='form-control'])[3]")
+	WebElement updatePassword ;
+	
+	@FindBy(xpath="(//select[@class='form-control'])[2]")
+	WebElement updateDropdown ;
+	
 	public void clickAdminUser()
 	{
 		adminUsers.click();
@@ -123,6 +135,35 @@ public class AdminUsersElements
 	public void clickInactiveButton()
 	{
 		inactive.click();
+	}
+	
+	public String getActiveButtonStatus()
+	{
+		return(active.getText());
+	}
+	
+	public void clickUpdateBtn()
+	{
+		update.click();
+	}
+	
+	public void typeUpdateUsername(String uName)
+	{
+	updateUsername.clear();
+	updateUsername.sendKeys(uName);
+	}
+	
+	public void typeUpdatePassword(String password)
+	{
+		updatePassword.clear();
+		updatePassword.sendKeys(password);
+	}
+	
+	public void selectUpdateUserType(String text)
+	{
+		 Select selectobj = new Select(updateDropdown);
+		 
+		  selectobj.selectByVisibleText(text);
 	}
 	public AdminUsersElements(WebDriver driver)
 	{
