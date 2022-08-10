@@ -1,244 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="0" failed="0" skipped="3">
+<testng-results ignored="37" total="42" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-02T21:34:44 IST" name="Default suite" finished-at="2022-08-02T21:34:44 IST" duration-ms="137">
+  <suite started-at="2022-08-09T14:43:55 IST" name="Suite" finished-at="2022-08-09T14:44:04 IST" duration-ms="9130">
     <groups>
+      <group name="regression">
+        <method signature="Login.validateLoginWithPasswordAlone()[pri:1, instance:testCases.Login@18271936]" name="validateLoginWithPasswordAlone" class="testCases.Login"/>
+        <method signature="Login.validateLoginWithUserNameAlone()[pri:2, instance:testCases.Login@18271936]" name="validateLoginWithUserNameAlone" class="testCases.Login"/>
+        <method signature="Login.validateLoginWithCorrectUserNameAndPassword()[pri:3, instance:testCases.Login@18271936]" name="validateLoginWithCorrectUserNameAndPassword" class="testCases.Login"/>
+        <method signature="Login.validateLoginWithInvalidUserName()[pri:6, instance:testCases.Login@18271936]" name="validateLoginWithInvalidUserName" class="testCases.Login"/>
+        <method signature="Login.validateLoginWithInvalidPassword()[pri:7, instance:testCases.Login@18271936]" name="validateLoginWithInvalidPassword" class="testCases.Login"/>
+      </group> <!-- regression -->
+      <group name="sanity">
+        <method signature="Login.validateLoginWithPasswordAlone()[pri:1, instance:testCases.Login@18271936]" name="validateLoginWithPasswordAlone" class="testCases.Login"/>
+        <method signature="Login.validateLoginWithUserNameAlone()[pri:2, instance:testCases.Login@18271936]" name="validateLoginWithUserNameAlone" class="testCases.Login"/>
+        <method signature="Login.validateLoginWithCorrectUserNameAndPassword()[pri:3, instance:testCases.Login@18271936]" name="validateLoginWithCorrectUserNameAndPassword" class="testCases.Login"/>
+        <method signature="Login.validateLoginWithInvalidUserName()[pri:6, instance:testCases.Login@18271936]" name="validateLoginWithInvalidUserName" class="testCases.Login"/>
+        <method signature="Login.validateLoginWithInvalidPassword()[pri:7, instance:testCases.Login@18271936]" name="validateLoginWithInvalidPassword" class="testCases.Login"/>
+      </group> <!-- sanity -->
     </groups>
-    <test started-at="2022-08-02T21:34:44 IST" name="Default test" finished-at="2022-08-02T21:34:44 IST" duration-ms="137">
-      <class name="testCases.ManageLocations">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="beforeTest" finished-at="2022-08-02T21:34:44 IST" duration-ms="13" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="beforeClass" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1659456284603" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\91859\AppData\Local\Temp\testng-eclipse--1607276837\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\91859\AppData\Local\Temp\testng-eclipse--1607276837\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:267)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:684)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:277)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+    <test started-at="2022-08-09T14:43:55 IST" name="Test" finished-at="2022-08-09T14:44:04 IST" duration-ms="9130">
+      <class name="testCases.Login">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:testCases.Login@18271936]" started-at="2022-08-09T14:43:55 IST" name="beforeClass" finished-at="2022-08-09T14:43:58 IST" duration-ms="3492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="beforeMethod" finished-at="2022-08-02T21:34:44 IST" duration-ms="0" status="SKIP">
+        <test-method signature="validateLoginWithPasswordAlone()[pri:1, instance:testCases.Login@18271936]" started-at="2022-08-09T14:43:58 IST" name="validateLoginWithPasswordAlone" finished-at="2022-08-09T14:43:59 IST" duration-ms="909" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="validateAddNewLocation()[pri:1, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="validateAddNewLocation" finished-at="2022-08-02T21:34:44 IST" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\91859\AppData\Local\Temp\testng-eclipse--1607276837\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\91859\AppData\Local\Temp\testng-eclipse--1607276837\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:267)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:684)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:277)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        </test-method> <!-- validateLoginWithPasswordAlone -->
+        <test-method signature="validateLoginWithUserNameAlone()[pri:2, instance:testCases.Login@18271936]" started-at="2022-08-09T14:43:59 IST" name="validateLoginWithUserNameAlone" finished-at="2022-08-09T14:44:00 IST" duration-ms="977" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateAddNewLocation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="afterMethod" finished-at="2022-08-02T21:34:44 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- validateLoginWithUserNameAlone -->
+        <test-method signature="validateLoginWithCorrectUserNameAndPassword()[pri:3, instance:testCases.Login@18271936]" started-at="2022-08-09T14:44:00 IST" name="validateLoginWithCorrectUserNameAndPassword" finished-at="2022-08-09T14:44:02 IST" duration-ms="2089" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="beforeMethod" finished-at="2022-08-02T21:34:44 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- validateLoginWithCorrectUserNameAndPassword -->
+        <test-method signature="validateLoginWithInvalidUserName()[pri:6, instance:testCases.Login@18271936]" started-at="2022-08-09T14:44:02 IST" name="validateLoginWithInvalidUserName" finished-at="2022-08-09T14:44:03 IST" duration-ms="672" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="validateSearchWithCountryAndLocation()[pri:2, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="validateSearchWithCountryAndLocation" finished-at="2022-08-02T21:34:44 IST" duration-ms="1" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\91859\AppData\Local\Temp\testng-eclipse--1607276837\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\91859\AppData\Local\Temp\testng-eclipse--1607276837\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:267)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:684)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:277)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        </test-method> <!-- validateLoginWithInvalidUserName -->
+        <test-method signature="validateLoginWithInvalidPassword()[pri:7, instance:testCases.Login@18271936]" started-at="2022-08-09T14:44:03 IST" name="validateLoginWithInvalidPassword" finished-at="2022-08-09T14:44:04 IST" duration-ms="565" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateSearchWithCountryAndLocation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="afterMethod" finished-at="2022-08-02T21:34:44 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="beforeMethod" finished-at="2022-08-02T21:34:44 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="validateSearchWithCountryAlone()[pri:3, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="validateSearchWithCountryAlone" finished-at="2022-08-02T21:34:44 IST" duration-ms="0" status="SKIP">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\91859\AppData\Local\Temp\testng-eclipse--1607276837\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeClass on method beforeClass but has not been marked @Optional or defined
-in C:\Users\91859\AppData\Local\Temp\testng-eclipse--1607276837\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:267)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
-at org.testng.internal.Parameters.createParameters(Parameters.java:684)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:277)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:180)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:122)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:806)
-at org.testng.TestRunner.run(TestRunner.java:601)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateSearchWithCountryAlone -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="afterMethod" finished-at="2022-08-02T21:34:44 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="afterClass" finished-at="2022-08-02T21:34:44 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- validateLoginWithInvalidPassword -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:testCases.Login@18271936]" started-at="2022-08-09T14:44:04 IST" name="afterClass" finished-at="2022-08-09T14:44:04 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.ManageLocations@2e8c1c9b]" started-at="2022-08-02T21:34:44 IST" name="afterTest" finished-at="2022-08-02T21:34:44 IST" duration-ms="0" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "this.driver" is null
-at utilityRepository.GeneralUtilities.quitBrowser(GeneralUtilities.java:109)
-at testCases.BaseClass.afterTest(BaseClass.java:75)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:643)
-at org.testng.TestRunner.afterRun(TestRunner.java:891)
-at org.testng.TestRunner.run(TestRunner.java:604)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:testCases.Login@18271936]" started-at="2022-08-09T14:44:04 IST" name="afterTest" finished-at="2022-08-09T14:44:04 IST" duration-ms="111" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- testCases.ManageLocations -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testCases.Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

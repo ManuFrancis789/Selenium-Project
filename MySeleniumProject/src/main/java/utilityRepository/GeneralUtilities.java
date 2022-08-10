@@ -37,23 +37,7 @@ public class GeneralUtilities
 		
 		return(driver);
 	}
-	//////////for page factory
-	/*public void clickMethodUtility(By property)
-	{
-		driver.findElement(property).click();
-		
-	}
 	
-	public void sendkeysMethodUtility(By property,String text)
-	{
-		driver.findElement(property).sendKeys(text);
-		
-	}
-	public void clearMethodUtility(By property)
-	{
-		driver.findElement(property).clear();
-		
-	}*/
 	
 	public void alertAccept() 
 	{
@@ -118,15 +102,6 @@ public class GeneralUtilities
 	{
 		driver.navigate().back();
 	}
-	public String getPageTitle()
-	{
-		return(driver.getTitle());
-		
-	}
 	
-	public String getPageUrl()
-	{
-		return(driver.getCurrentUrl());
-		
-	}
+	
 }

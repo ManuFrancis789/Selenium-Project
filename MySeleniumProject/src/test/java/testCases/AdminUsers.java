@@ -3,6 +3,7 @@ package testCases;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import constants.Constants;
 import elementRepository.AdminUsersElements;
@@ -15,12 +16,14 @@ public class AdminUsers extends BaseClass
 	LoginElements loginObj;
 	ExcelRead excelObj;
 	AdminUsersElements adminObj;
-  @Test(priority=1)
+	SoftAssert softassert;
+  @Test(priority=1,groups= {"regression"})
   public void validateAddNewPageOption() throws Exception 
   {
 	  loginObj = new LoginElements(driver);
 	  excelObj = new ExcelRead();
 	  adminObj = new AdminUsersElements(driver);
+	  softassert = new SoftAssert();
 	  loginObj.loginMethod(Constants.username,Constants.password);
 	  
 	  adminObj.clickAdminUser();
@@ -34,26 +37,29 @@ public class AdminUsers extends BaseClass
 	  String excpected = Constants.expectedClickAlert;
 	  adminObj.clickAlert();
 	  
-	  Assert.assertEquals(actual, excpected);
+	  softassert.assertEquals(actual, excpected);
+	  softassert.assertAll();
 	     
 	  
   }
   
-  @Test(priority=2)
+  @Test(priority=2,groups= {"regression"})
   public void validateDeletePageOption() throws Exception 
   {
 	
 	  adminObj = new AdminUsersElements(driver);
+	  softassert = new SoftAssert();
 	  adminObj.clickDelete();
 	  utilobj.alertAccept();
 	  String actual = adminObj.getAlertText();
 	  String excpected = Constants.expectedClickAlert;
 	  adminObj.clickDeleteAlert();
 	   
-	  Assert.assertEquals(actual, excpected);
+	  softassert.assertEquals(actual, excpected);
+	  softassert.assertAll();
 	  
   }
-  @Test(priority=3)
+  @Test(priority=3,groups= {"regression"})
   public void validateLockPageButtonIsClickable() throws Exception 
   {
 		  adminObj = new AdminUsersElements(driver);  
@@ -63,7 +69,7 @@ public class AdminUsers extends BaseClass
 		  adminObj.clickAlert();
 		  Assert.assertEquals(actual, expected);
   }
-  @Test(priority=4)
+  @Test(priority=4,groups= {"regression"})
   public void validateUnLockPageButtonIsClickable() throws Exception 
   {
 	
@@ -75,7 +81,7 @@ public class AdminUsers extends BaseClass
 	  Assert.assertEquals(actual, expected);
   }
 
-  @Test(priority=5)
+  @Test(priority=5,groups= {"regression"})
   public void validateActiveButtonIsClickable() throws Exception 
   {
 	
@@ -86,7 +92,7 @@ public class AdminUsers extends BaseClass
 	  adminObj.clickAlert();
 	  Assert.assertEquals(actual, expected);
   }
-  @Test(priority=6)
+  @Test(priority=6,groups= {"regression"})
   public void validateInActiveButtonIsClickable()  
   {
 	
@@ -97,7 +103,7 @@ public class AdminUsers extends BaseClass
 	  adminObj.clickAlert();
 	  Assert.assertEquals(actual, expected);
   }
-  @Test(priority=7)
+  @Test(priority=7,groups= {"regression"})
   public void validateUpdateButton() throws Exception 
   {
 	

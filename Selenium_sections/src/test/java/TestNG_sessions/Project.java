@@ -274,9 +274,16 @@ utilobj.alertAccept();
 WebElement active = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[5]/a/span"));
 System.out.println(active.getText());
 
+WebElement x = driver.findElement(By.xpath("e[@class='table table-bordered table-hover table-sm']/tbody/tr/td"));
+System.out.println(x.isDisplayed());
+
+WebElement next = driver.findElement(By.xpath("(//span[@aria-hidden='true'])[1]"));
+utilobj.scrollMethod(next);
+next.sendKeys(Keys.ENTER);
 
 
-
+WebElement y = driver.findElement(By.xpath("e[@class='table table-bordered table-hover table-sm']/tbody/tr/td"));
+System.out.println(y.isDisplayed());
 
 		 
 	
@@ -294,30 +301,8 @@ System.out.println(active.getText());
 	 password.sendKeys("admin");
 	 signin.click();
 	 
-utilobj.clickMethodUtility(By.xpath("(//a[@class='small-box-footer'])[10]"));
-WebElement date = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td[6]/a[2]"));
-	date.click();
-	
-	WebElement calendar = driver.findElement(By.xpath("(//input[@type='date'])[3]"));
-	calendar.click();
-	calendar.sendKeys(Keys.ARROW_DOWN);
-	calendar.sendKeys(Keys.ARROW_LEFT);
-	calendar.sendKeys(Keys.ARROW_DOWN);
-	calendar.sendKeys(Keys.ARROW_LEFT);
-	calendar.sendKeys(Keys.ARROW_DOWN);
-	
-	System.out.println(calendar.getAttribute("value"));
-	WebElement timeFrom = driver.findElement(By.xpath("(//input[@id='basicExample'])[1]"));
-	timeFrom.click();
-	timeFrom.sendKeys(Keys.ARROW_DOWN);
-	timeFrom.sendKeys(Keys.ENTER);
-	//actionobj.contextClick(calendar).build().perform();
-	//actionobj.
-	//actionobj.click(calendar).build().perform();
-	/*String dateVal = "November 22, 2020";
-	JavascriptExecutor  js=(JavascriptExecutor)driver; 
-    js.executeScript("arguments[0].click();", 
-    		driver.findElement(By.xpath("(//input[@type='date'])[3]")));*/
+
+
   
   }
   

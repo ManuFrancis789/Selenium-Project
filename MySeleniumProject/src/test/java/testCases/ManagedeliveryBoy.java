@@ -15,7 +15,7 @@ public class ManagedeliveryBoy extends BaseClass
 	ExcelRead excelObj;
 	ManageDeliveryBoyElement delObj;
 	
-  @Test(priority=1)
+  @Test(priority=1,groups= {"regression"})
   public void validateAddNewDeliveryBoy() throws Exception 
   {
 	  loginObj = new LoginElements(driver);
@@ -42,7 +42,7 @@ public class ManagedeliveryBoy extends BaseClass
 	  Assert.assertEquals(actual, excpected);
 	    
   }
-  @Test(priority=2)
+  @Test(priority=2,groups= {"regression"})
   public void validateSearchDeliveryBoyWithValidName() throws Exception 
   {
 	  
@@ -62,7 +62,7 @@ public class ManagedeliveryBoy extends BaseClass
 		    
   }
   
-  @Test(priority=3)
+  @Test(priority=3,groups= {"regression"})
   public void validateSearchDeliveryBoyWithValidPhoneNumber() throws Exception 
   {
 	  
@@ -82,7 +82,7 @@ public class ManagedeliveryBoy extends BaseClass
 		    
   }
   
-  @Test(priority=4)
+  @Test(priority=4,groups= {"regression"})
   public void validateSearchDeliveryBoyWithValidEmail() throws Exception 
   {
 	  
@@ -101,7 +101,7 @@ public class ManagedeliveryBoy extends BaseClass
 	  Assert.assertEquals(actual, excpected);
 		    
   }
-  @Test(priority=5)
+  @Test(priority=5,groups= {"regression"})
   public void validateSearchDeliveryBoyWithInvalidName() throws Exception 
   {
 	  
@@ -121,7 +121,7 @@ public class ManagedeliveryBoy extends BaseClass
 		    
   }
   
-  @Test(priority=6)
+  @Test(priority=6,groups= {"regression"})
   public void validateSearchDeliveryBoyWithInvalidPhoneNumber() throws Exception 
   {
 	  
@@ -142,7 +142,7 @@ public class ManagedeliveryBoy extends BaseClass
 		    
   }
   
-  @Test(priority=7)
+  @Test(priority=7,groups= {"regression"})
   public void validateSearchDeliveryBoyWithInvalidEmail() throws Exception 
   {
 	  
@@ -163,7 +163,7 @@ public class ManagedeliveryBoy extends BaseClass
 		    
   }
   
-  @Test(priority=9)
+  @Test(priority=9,groups= {"regression"})
   public void validateDeleteDeliveryBoy() throws Exception 
   {
 	  
@@ -175,7 +175,7 @@ public class ManagedeliveryBoy extends BaseClass
 		    
   }
   
-  @Test(priority=8)
+  @Test(priority=8,groups= {"regression"})
   public void validateUpdateDeliveryBoy() throws Exception 
   {
 	  
@@ -195,7 +195,7 @@ public class ManagedeliveryBoy extends BaseClass
 		    
   }
   
-  @Test(priority=9)
+  @Test(priority=9,groups= {"regression"})
   public void validateActiveButtonStatusOfDeliveryBoy() 
   {
 	  delObj = new ManageDeliveryBoyElement(driver);

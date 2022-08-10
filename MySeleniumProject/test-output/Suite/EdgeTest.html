@@ -1,0 +1,265 @@
+<html>
+<head>
+<title>TestNG:  EdgeTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>EdgeTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>37/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Aug 09 10:08:51 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>121 seconds (121484 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>regression </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.ManagedeliveryBoy.validateActiveButtonStatusOfDeliveryBoy()'><b>validateActiveButtonStatusOfDeliveryBoy</b><br>Test class: testCases.ManagedeliveryBoy</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManagedeliveryBoy@28dcca0c</td></tr>
+<tr>
+<td title='testCases.AdminUsers.validateUnLockPageButtonIsClickable()'><b>validateUnLockPageButtonIsClickable</b><br>Test class: testCases.AdminUsers</td>
+<td></td>
+<td>0</td>
+<td>testCases.AdminUsers@723ca036</td></tr>
+<tr>
+<td title='testCases.ManageLocations.validateSearchWithCountryAlone()'><b>validateSearchWithCountryAlone</b><br>Test class: testCases.ManageLocations</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManageLocations@45d84a20</td></tr>
+<tr>
+<td title='testCases.AdminUsers.validateActiveButtonIsClickable()'><b>validateActiveButtonIsClickable</b><br>Test class: testCases.AdminUsers</td>
+<td></td>
+<td>0</td>
+<td>testCases.AdminUsers@723ca036</td></tr>
+<tr>
+<td title='testCases.ManagedeliveryBoy.validateSearchDeliveryBoyWithInvalidEmail()'><b>validateSearchDeliveryBoyWithInvalidEmail</b><br>Test class: testCases.ManagedeliveryBoy</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManagedeliveryBoy@28dcca0c</td></tr>
+<tr>
+<td title='testCases.ManageLocations.validateActiveButtonStatus()'><b>validateActiveButtonStatus</b><br>Test class: testCases.ManageLocations</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManageLocations@45d84a20</td></tr>
+<tr>
+<td title='testCases.ManagePages.validateTextBoxesinAddNewPageOption()'><b>validateTextBoxesinAddNewPageOption</b><br>Test class: testCases.ManagePages</td>
+<td></td>
+<td>1</td>
+<td>testCases.ManagePages@304bb45b</td></tr>
+<tr>
+<td title='testCases.Login.validateRememberMebuttonBeforeClick()'><b>validateRememberMebuttonBeforeClick</b><br>Test class: testCases.Login</td>
+<td></td>
+<td>0</td>
+<td>testCases.Login@533bda92</td></tr>
+<tr>
+<td title='testCases.DashBoard.validateUpdateExpenseCategory()'><b>validateUpdateExpenseCategory</b><br>Test class: testCases.DashBoard</td>
+<td></td>
+<td>1</td>
+<td>testCases.DashBoard@25be7b63</td></tr>
+<tr>
+<td title='testCases.ManagedeliveryBoy.validateSearchDeliveryBoyWithValidEmail()'><b>validateSearchDeliveryBoyWithValidEmail</b><br>Test class: testCases.ManagedeliveryBoy</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManagedeliveryBoy@28dcca0c</td></tr>
+<tr>
+<td title='testCases.AdminUsers.validateUpdateButton()'><b>validateUpdateButton</b><br>Test class: testCases.AdminUsers</td>
+<td></td>
+<td>1</td>
+<td>testCases.AdminUsers@723ca036</td></tr>
+<tr>
+<td title='testCases.ManageLocations.validateAddNewLocation()'><b>validateAddNewLocation</b><br>Test class: testCases.ManageLocations</td>
+<td></td>
+<td>4</td>
+<td>testCases.ManageLocations@45d84a20</td></tr>
+<tr>
+<td title='testCases.Login.validateLoginWithInvalidPassword()'><b>validateLoginWithInvalidPassword</b><br>Test class: testCases.Login</td>
+<td></td>
+<td>0</td>
+<td>testCases.Login@533bda92</td></tr>
+<tr>
+<td title='testCases.ManagePages.validateDeleteButton()'><b>validateDeleteButton</b><br>Test class: testCases.ManagePages</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManagePages@304bb45b</td></tr>
+<tr>
+<td title='testCases.ManagedeliveryBoy.validateAddNewDeliveryBoy()'><b>validateAddNewDeliveryBoy</b><br>Test class: testCases.ManagedeliveryBoy</td>
+<td></td>
+<td>3</td>
+<td>testCases.ManagedeliveryBoy@28dcca0c</td></tr>
+<tr>
+<td title='testCases.ManagePages.validateUploadImagesinAddNewPageOption()'><b>validateUploadImagesinAddNewPageOption</b><br>Test class: testCases.ManagePages</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManagePages@304bb45b</td></tr>
+<tr>
+<td title='testCases.ManagedeliveryBoy.validateSearchDeliveryBoyWithValidName()'><b>validateSearchDeliveryBoyWithValidName</b><br>Test class: testCases.ManagedeliveryBoy</td>
+<td></td>
+<td>1</td>
+<td>testCases.ManagedeliveryBoy@28dcca0c</td></tr>
+<tr>
+<td title='testCases.AdminUsers.validateInActiveButtonIsClickable()'><b>validateInActiveButtonIsClickable</b><br>Test class: testCases.AdminUsers</td>
+<td></td>
+<td>0</td>
+<td>testCases.AdminUsers@723ca036</td></tr>
+<tr>
+<td title='testCases.Login.validateLoginWithCorrectUserNameAndPassword()'><b>validateLoginWithCorrectUserNameAndPassword</b><br>Test class: testCases.Login</td>
+<td></td>
+<td>2</td>
+<td>testCases.Login@533bda92</td></tr>
+<tr>
+<td title='testCases.ManagedeliveryBoy.validateSearchDeliveryBoyWithValidPhoneNumber()'><b>validateSearchDeliveryBoyWithValidPhoneNumber</b><br>Test class: testCases.ManagedeliveryBoy</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManagedeliveryBoy@28dcca0c</td></tr>
+<tr>
+<td title='testCases.AdminUsers.validateLockPageButtonIsClickable()'><b>validateLockPageButtonIsClickable</b><br>Test class: testCases.AdminUsers</td>
+<td></td>
+<td>0</td>
+<td>testCases.AdminUsers@723ca036</td></tr>
+<tr>
+<td title='testCases.ManagedeliveryBoy.validateSearchDeliveryBoyWithInvalidPhoneNumber()'><b>validateSearchDeliveryBoyWithInvalidPhoneNumber</b><br>Test class: testCases.ManagedeliveryBoy</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManagedeliveryBoy@28dcca0c</td></tr>
+<tr>
+<td title='testCases.ManagePages.validateManagePagesSearchOptionWithPageName()'><b>validateManagePagesSearchOptionWithPageName</b><br>Test class: testCases.ManagePages</td>
+<td></td>
+<td>3</td>
+<td>testCases.ManagePages@304bb45b</td></tr>
+<tr>
+<td title='testCases.Login.validateLoginWithUserNameAlone()'><b>validateLoginWithUserNameAlone</b><br>Test class: testCases.Login</td>
+<td></td>
+<td>0</td>
+<td>testCases.Login@533bda92</td></tr>
+<tr>
+<td title='testCases.ManagePages.validateAddNewPageOption()'><b>validateAddNewPageOption</b><br>Test class: testCases.ManagePages<br>Parameters: Flowers, Flowers, Roses are Red Flowers</td>
+<td></td>
+<td>7</td>
+<td>testCases.ManagePages@304bb45b</td></tr>
+<tr>
+<td title='testCases.ManageLocations.validateSearchWithCountryAndLocation()'><b>validateSearchWithCountryAndLocation</b><br>Test class: testCases.ManageLocations</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManageLocations@45d84a20</td></tr>
+<tr>
+<td title='testCases.AdminUsers.validateAddNewPageOption()'><b>validateAddNewPageOption</b><br>Test class: testCases.AdminUsers</td>
+<td></td>
+<td>3</td>
+<td>testCases.AdminUsers@723ca036</td></tr>
+<tr>
+<td title='testCases.Login.validateRememberMebuttonAfterClick()'><b>validateRememberMebuttonAfterClick</b><br>Test class: testCases.Login</td>
+<td></td>
+<td>0</td>
+<td>testCases.Login@533bda92</td></tr>
+<tr>
+<td title='testCases.ManageLocations.validateDeleteLocation()'><b>validateDeleteLocation</b><br>Test class: testCases.ManageLocations</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManageLocations@45d84a20</td></tr>
+<tr>
+<td title='testCases.DashBoard.validateDeleteExpenseCategory()'><b>validateDeleteExpenseCategory</b><br>Test class: testCases.DashBoard</td>
+<td></td>
+<td>0</td>
+<td>testCases.DashBoard@25be7b63</td></tr>
+<tr>
+<td title='testCases.Login.validateLoginWithInvalidUserName()'><b>validateLoginWithInvalidUserName</b><br>Test class: testCases.Login</td>
+<td></td>
+<td>0</td>
+<td>testCases.Login@533bda92</td></tr>
+<tr>
+<td title='testCases.ManagedeliveryBoy.validateDeleteDeliveryBoy()'><b>validateDeleteDeliveryBoy</b><br>Test class: testCases.ManagedeliveryBoy</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManagedeliveryBoy@28dcca0c</td></tr>
+<tr>
+<td title='testCases.DashBoard.validateAddExpenseCategory()'><b>validateAddExpenseCategory</b><br>Test class: testCases.DashBoard</td>
+<td></td>
+<td>2</td>
+<td>testCases.DashBoard@25be7b63</td></tr>
+<tr>
+<td title='testCases.ManagedeliveryBoy.validateSearchDeliveryBoyWithInvalidName()'><b>validateSearchDeliveryBoyWithInvalidName</b><br>Test class: testCases.ManagedeliveryBoy</td>
+<td></td>
+<td>0</td>
+<td>testCases.ManagedeliveryBoy@28dcca0c</td></tr>
+<tr>
+<td title='testCases.ManagedeliveryBoy.validateUpdateDeliveryBoy()'><b>validateUpdateDeliveryBoy</b><br>Test class: testCases.ManagedeliveryBoy</td>
+<td></td>
+<td>1</td>
+<td>testCases.ManagedeliveryBoy@28dcca0c</td></tr>
+<tr>
+<td title='testCases.Login.validateLoginWithPasswordAlone()'><b>validateLoginWithPasswordAlone</b><br>Test class: testCases.Login</td>
+<td></td>
+<td>0</td>
+<td>testCases.Login@533bda92</td></tr>
+<tr>
+<td title='testCases.AdminUsers.validateDeletePageOption()'><b>validateDeletePageOption</b><br>Test class: testCases.AdminUsers</td>
+<td></td>
+<td>0</td>
+<td>testCases.AdminUsers@723ca036</td></tr>
+</table><p>
+</body>
+</html>

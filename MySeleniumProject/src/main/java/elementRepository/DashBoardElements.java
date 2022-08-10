@@ -42,6 +42,9 @@ public class DashBoardElements
 	@FindBy(xpath="//button[@name='Create']")
 	WebElement save ;
 	
+	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr/td")
+	WebElement expectedNew;
+	
 	
 	public void clickUpdate()
 	{
@@ -97,6 +100,12 @@ public class DashBoardElements
 	{
 		save.click();
 	}
+	
+	public String getNewExpenseCategory()
+	{
+		return(expectedNew.getText());
+	}
+	
 	public DashBoardElements(WebDriver driver)
 	{
 		this.driver = driver;

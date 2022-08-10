@@ -17,7 +17,7 @@ public class ManagePages extends BaseClass
 	ExcelRead excelObj;
 	ManagePagesElements managePageObj;
 	UploadUtility uploadObj;
-  @Test(priority=1)
+  @Test(priority=1,groups= {"regression"})
   public void validateManagePagesSearchOptionWithPageName() throws Exception 
   {
 	  loginObj = new LoginElements(driver);
@@ -43,7 +43,7 @@ public class ManagePages extends BaseClass
 	
 	
   
-  @Test(dataProvider = "manage pages",priority=5)
+  @Test(dataProvider = "manage pages",priority=5,groups= {"regression"})
   public void validateAddNewPageOption(String title,String name,String description) throws Exception 
   {
 	  loginObj = new LoginElements(driver);
@@ -81,7 +81,7 @@ public class ManagePages extends BaseClass
     };
   }
   
-  @Test(priority=2)
+  @Test(priority=2,groups= {"regression"})
   public void validateTextBoxesinAddNewPageOption() throws Exception 
   {
 	 
@@ -96,7 +96,7 @@ public class ManagePages extends BaseClass
 	  Assert.assertEquals(Constants.addNewPageStringPageName,managePageObj.getAddnewPageNameAttributeValue()); 
 	
   }
-  @Test(priority=3)
+  @Test(priority=3,groups= {"regression"})
   public void validateUploadImagesinAddNewPageOption() throws Exception 
   {
 	
@@ -106,7 +106,7 @@ public class ManagePages extends BaseClass
 	  utilobj.back();
   }
   
-  @Test(priority=4)
+  @Test(priority=4,groups= {"regression"})
   public void validateDeleteButton() throws Exception 
   {
 	 

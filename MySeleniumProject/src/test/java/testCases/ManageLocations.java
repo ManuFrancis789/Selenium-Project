@@ -15,7 +15,7 @@ public class ManageLocations extends BaseClass
 	  ExcelRead excelObj;
 	  ManageLocationsElements locationObj;
 	
-  @Test(priority =1)
+  @Test(priority =1,groups= {"regression"})
   public void validateAddNewLocation() throws Exception 
   {
 	  loginObj = new LoginElements(driver);
@@ -38,7 +38,7 @@ public class ManageLocations extends BaseClass
 	  
 	  Assert.assertEquals(actual, excpected, "location not added");  
   }
-  @Test(priority =2)
+  @Test(priority =2,groups= {"regression"})
   public void validateSearchWithCountryAndLocation() throws Exception
   {
 	 
@@ -56,7 +56,7 @@ public class ManageLocations extends BaseClass
 	   
   }
   
-  @Test(priority =3)
+  @Test(priority =3,groups= {"regression"})
   public void validateSearchWithCountryAlone() throws Exception
   {
 	  
@@ -73,7 +73,7 @@ public class ManageLocations extends BaseClass
 	   
   }
   
-  @Test(priority =4)
+  @Test(priority =4,groups= {"regression"})
   public void validateDeleteLocation() throws Exception
   {
 	  
@@ -91,7 +91,7 @@ public class ManageLocations extends BaseClass
 	 	 	   
   }
   
-  @Test(priority=5)
+  @Test(priority=5,groups= {"regression"})
   public void validateActiveButtonStatus() 
   {
 	  locationObj = new ManageLocationsElements(driver);

@@ -50,7 +50,7 @@ public class BaseClass
   }
   
  @Parameters({"browser"})
-@BeforeClass
+@BeforeClass(groups= {"regression","sanity"})
 public void beforeClass(String browser) throws Exception
 {
 	  testBasic();
@@ -58,7 +58,7 @@ public void beforeClass(String browser) throws Exception
 	}
 
  
- @AfterClass
+ @AfterClass(groups= {"regression","sanity"})
  public void afterClass()
  {
 	 utilobj.closeBrowser();
@@ -69,7 +69,7 @@ public void beforeClass(String browser) throws Exception
 		
   }
 
-  @AfterTest
+  @AfterTest(groups= {"regression","sanity"})
   public void afterTest() 
   {
 	  utilobj.quitBrowser();
